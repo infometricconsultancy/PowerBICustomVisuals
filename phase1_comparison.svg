@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1400" height="900" fill="#faf9f8"/>
+
+  <!-- Titles -->
+  <text x="350" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#201f1e">BEFORE</text>
+  <text x="1050" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#201f1e">AFTER — Phase 1 enhancements</text>
+  <line x1="700" y1="10" x2="700" y2="890" stroke="#d2d0ce" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- ============ BEFORE PANEL ============ -->
+  <g transform="translate(30,55)">
+    <rect width="640" height="800" rx="6" fill="#ffffff" stroke="#e1dfdd"/>
+
+    <!-- toolbar -->
+    <g transform="translate(12,12)">
+      <rect width="616" height="34" rx="4" fill="#ffffff" stroke="#e1dfdd"/>
+      <rect x="6" y="6" width="70" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="41" y="21" text-anchor="middle" font-size="10" fill="#323130">Level 1</text>
+      <rect x="80" y="6" width="70" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="115" y="21" text-anchor="middle" font-size="10" fill="#323130">Level 2</text>
+      <rect x="160" y="6" width="80" height="22" rx="3" fill="#323130"/>
+      <text x="200" y="21" text-anchor="middle" font-size="10" fill="#ffffff">Collapse all</text>
+
+      <line x1="252" y1="4" x2="252" y2="30" stroke="#d2d0ce"/>
+      <rect x="260" y="6" width="60" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="290" y="21" text-anchor="middle" font-size="10" fill="#323130">Revenue</text>
+
+      <line x1="330" y1="4" x2="330" y2="30" stroke="#d2d0ce"/>
+      <rect x="338" y="6" width="120" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="345" y="21" font-size="10" fill="#a19f9d">Search…</text>
+      <rect x="462" y="6" width="20" height="22" fill="#ffffff"/>
+      <text x="472" y="21" text-anchor="middle" font-size="11" fill="#605e5c">◀</text>
+      <rect x="484" y="6" width="20" height="22" fill="#ffffff"/>
+      <text x="494" y="21" text-anchor="middle" font-size="11" fill="#605e5c">▶</text>
+      <text x="555" y="21" text-anchor="middle" font-size="10" fill="#605e5c">2 / 8</text>
+    </g>
+
+    <!-- tree (no badges, no theme, flat gray/blue) -->
+    <g transform="translate(60,90)">
+      <!-- links -->
+      <path d="M60,10 C130,10 130,70 200,70" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M60,10 C130,10 130,150 200,150" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M60,10 C130,10 130,230 200,230" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M200,70 C260,70 260,40 320,40" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M200,70 C260,70 260,100 320,100" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M200,230 C260,230 260,200 320,200" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M200,230 C260,230 260,260 320,260" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+
+      <!-- root -->
+      <circle cx="60" cy="10" r="14" fill="#4c78a8" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="60" y="-8" text-anchor="middle" font-size="11" fill="#201f1e">All Regions</text>
+
+      <!-- level1 nodes: all same flat blue color regardless of theme -->
+      <circle cx="200" cy="70" r="12" fill="#4c78a8" stroke="#605e5c" stroke-width="1.5"/>
+      <text x="200" y="52" text-anchor="middle" font-size="10" fill="#201f1e">North</text>
+
+      <circle cx="200" cy="150" r="12" fill="#4c78a8" stroke="#605e5c" stroke-width="1.5"/>
+      <text x="200" y="132" text-anchor="middle" font-size="10" fill="#201f1e">South (collapsed)</text>
+      <!-- no badge showing hidden count -->
+
+      <circle cx="200" cy="230" r="12" fill="#4c78a8" stroke="#605e5c" stroke-width="1.5"/>
+      <text x="200" y="212" text-anchor="middle" font-size="10" fill="#201f1e">East</text>
+
+      <!-- level2 nodes under North -->
+      <circle cx="320" cy="40" r="9" fill="#4c78a8" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="320" y="24" text-anchor="middle" font-size="9" fill="#201f1e">Store 12</text>
+      <circle cx="320" cy="100" r="9" fill="#4c78a8" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="320" y="118" text-anchor="middle" font-size="9" fill="#201f1e">Store 41</text>
+
+      <!-- level2 under East -->
+      <circle cx="320" cy="200" r="9" fill="#4c78a8" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="320" y="184" text-anchor="middle" font-size="9" fill="#201f1e">Store 07</text>
+      <circle cx="320" cy="260" r="9" fill="#4c78a8" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="320" y="278" text-anchor="middle" font-size="9" fill="#201f1e">Store 19</text>
+    </g>
+
+    <!-- callouts explaining what's missing -->
+    <g font-size="11" fill="#a19f9d">
+      <text x="20" y="420">✕ No "Views" dropdown — can't save/restore a layout</text>
+      <text x="20" y="444">✕ No grand-total readout in the toolbar</text>
+      <text x="20" y="468">✕ Collapsed nodes give no hint how much is hidden</text>
+      <text x="20" y="492">✕ Typing a search term only highlights — doesn't filter other visuals</text>
+      <text x="20" y="516">✕ Colors are fixed, ignore the report's theme</text>
+      <text x="20" y="540">✕ Totals for non-SUM measures (avg, min/max) computed</text>
+      <text x="36" y="558">   naively client-side by summing children</text>
+    </g>
+  </g>
+
+  <!-- ============ AFTER PANEL ============ -->
+  <g transform="translate(730,55)">
+    <rect width="640" height="800" rx="6" fill="#ffffff" stroke="#e1dfdd"/>
+
+    <!-- toolbar -->
+    <g transform="translate(12,12)">
+      <rect width="616" height="34" rx="4" fill="#ffffff" stroke="#e1dfdd"/>
+      <rect x="6" y="6" width="70" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="41" y="21" text-anchor="middle" font-size="10" fill="#323130">Level 1</text>
+      <rect x="80" y="6" width="70" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="115" y="21" text-anchor="middle" font-size="10" fill="#323130">Level 2</text>
+      <rect x="160" y="6" width="80" height="22" rx="3" fill="#323130"/>
+      <text x="200" y="21" text-anchor="middle" font-size="10" fill="#ffffff">Collapse all</text>
+
+      <line x1="252" y1="4" x2="252" y2="30" stroke="#d2d0ce"/>
+      <rect x="260" y="6" width="60" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="290" y="21" text-anchor="middle" font-size="10" fill="#323130">Revenue</text>
+
+      <line x1="330" y1="4" x2="330" y2="30" stroke="#d2d0ce"/>
+      <rect x="338" y="6" width="90" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="345" y="21" font-size="10" fill="#201f1e">untag|</text>
+      <rect x="432" y="6" width="20" height="22" fill="#ffffff"/>
+      <text x="442" y="21" text-anchor="middle" font-size="11" fill="#605e5c">◀</text>
+      <rect x="454" y="6" width="20" height="22" fill="#ffffff"/>
+      <text x="464" y="21" text-anchor="middle" font-size="11" fill="#605e5c">▶</text>
+      <text x="497" y="21" text-anchor="middle" font-size="10" fill="#605e5c">1/3</text>
+
+      <line x1="522" y1="4" x2="522" y2="30" stroke="#d2d0ce"/>
+      <rect x="530" y="6" width="58" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="559" y="21" text-anchor="middle" font-size="9" fill="#323130">Q3 view ▾</text>
+    </g>
+    <g transform="translate(600,10)">
+      <rect x="0" y="8" width="42" height="22" rx="3" fill="#ffffff" stroke="#d2d0ce"/>
+      <text x="21" y="23" text-anchor="middle" font-size="9" fill="#323130">Save</text>
+    </g>
+
+    <!-- second toolbar row: total -->
+    <g transform="translate(12,52)">
+      <rect x="0" y="0" width="616" height="22" fill="#ffffff"/>
+      <text x="4" y="15" font-size="11" font-weight="700" fill="#323130">Total: 128,450.00</text>
+      <text x="180" y="15" font-size="9" fill="#7f2aa8" font-style="italic">← host-aggregated via Total/Subtotal API</text>
+    </g>
+
+    <!-- tree with theme colors + badges + cross-filter dim -->
+    <g transform="translate(60,110)">
+      <!-- links -->
+      <path d="M60,10 C130,10 130,70 200,70" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M60,10 C130,10 130,150 200,150" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M60,10 C130,10 130,230 200,230" stroke="#b3b3b3" fill="none" stroke-width="1.5" opacity="0.3"/>
+      <path d="M200,70 C260,70 260,40 320,40" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M200,70 C260,70 260,100 320,100" stroke="#b3b3b3" fill="none" stroke-width="1.5"/>
+      <path d="M200,230 C260,230 260,200 320,200" stroke="#b3b3b3" fill="none" stroke-width="1.5" opacity="0.3"/>
+      <path d="M200,230 C260,230 260,260 320,260" stroke="#b3b3b3" fill="none" stroke-width="1.5" opacity="0.3"/>
+
+      <!-- root -->
+      <circle cx="60" cy="10" r="14" fill="#118dff" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="60" y="-8" text-anchor="middle" font-size="11" fill="#201f1e">All Regions</text>
+
+      <!-- North: theme colored, in search results -->
+      <circle cx="200" cy="70" r="12" fill="#12239e" stroke="#ffb900" stroke-width="3"/>
+      <text x="200" y="52" text-anchor="middle" font-size="10" fill="#201f1e" font-weight="700">North</text>
+      <text x="222" y="76" font-size="8" fill="#ffb900" font-weight="700">match</text>
+
+      <!-- South: theme colored, collapsed, with badge -->
+      <circle cx="200" cy="150" r="12" fill="#12239e" stroke="#605e5c" stroke-width="1.5"/>
+      <circle cx="208" cy="142" r="8" fill="#605e5c" stroke="#ffffff"/>
+      <text x="208" y="145" text-anchor="middle" font-size="8" fill="#ffffff" font-weight="700">+14</text>
+      <text x="200" y="132" text-anchor="middle" font-size="10" fill="#201f1e">South (collapsed)</text>
+
+      <!-- East: dimmed, not part of filter -->
+      <circle cx="200" cy="230" r="12" fill="#12239e" stroke="#605e5c" stroke-width="1.5" opacity="0.3"/>
+      <text x="200" y="212" text-anchor="middle" font-size="10" fill="#201f1e" opacity="0.4">East</text>
+
+      <!-- level2 under North: theme colored, one is match -->
+      <circle cx="320" cy="40" r="9" fill="#e6842b" stroke="#ffb900" stroke-width="3"/>
+      <text x="320" y="24" text-anchor="middle" font-size="9" fill="#201f1e" font-weight="700">Store 12 - untagged</text>
+      <circle cx="320" cy="100" r="9" fill="#e6842b" stroke="#ffffff" stroke-width="1.5"/>
+      <text x="320" y="118" text-anchor="middle" font-size="9" fill="#201f1e">Store 41</text>
+
+      <!-- level2 under East: dimmed -->
+      <circle cx="320" cy="200" r="9" fill="#e6842b" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+      <text x="320" y="184" text-anchor="middle" font-size="9" fill="#201f1e" opacity="0.4">Store 07</text>
+      <circle cx="320" cy="260" r="9" fill="#e6842b" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+      <text x="320" y="278" text-anchor="middle" font-size="9" fill="#201f1e" opacity="0.4">Store 19</text>
+    </g>
+
+    <!-- callouts -->
+    <g font-size="11" fill="#107c10">
+      <text x="20" y="440">✓ "Q3 view ▾" dropdown + Save — restores collapse/zoom/search instantly</text>
+      <text x="20" y="464">✓ "Total: 128,450.00" — pulled from Power BI's own Total/Subtotal API</text>
+      <text x="20" y="488">✓ Gray "+14" badge on South — shows hidden descendant count</text>
+      <text x="20" y="512">✓ Typing "untag" cross-filters the whole report (other visuals dim/update),</text>
+      <text x="36" y="530">   not just this chart — matches outlined in amber, non-matches faded</text>
+      <text x="20" y="554">✓ Node colors (navy/orange) now pulled from the report's theme palette</text>
+      <text x="20" y="578">✓ Correct for any aggregation (avg, min/max, distinct count) — not just SUM</text>
+    </g>
+  </g>
+</svg>

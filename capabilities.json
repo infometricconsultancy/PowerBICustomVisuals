@@ -1,0 +1,185 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Hierarchy levels",
+            "name": "levels",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Measure",
+            "name": "measure",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+        "layout": {
+            "displayName": "Layout",
+            "properties": {
+                "orientation": {
+                    "displayName": "Orientation",
+                    "type": {
+                        "enumeration": [
+                            { "displayName": "Vertical (top-down)", "value": "vertical" },
+                            { "displayName": "Horizontal (left-right)", "value": "horizontal" }
+                        ]
+                    }
+                },
+                "nodeSpacing": {
+                    "displayName": "Node spacing",
+                    "type": { "numeric": true }
+                },
+                "linkStyle": {
+                    "displayName": "Link style",
+                    "type": {
+                        "enumeration": [
+                            { "displayName": "Curved", "value": "curved" },
+                            { "displayName": "Elbow", "value": "elbow" }
+                        ]
+                    }
+                }
+            }
+        },
+        "nodes": {
+            "displayName": "Nodes",
+            "properties": {
+                "defaultRadius": {
+                    "displayName": "Default radius",
+                    "type": { "numeric": true }
+                },
+                "colorByMeasure": {
+                    "displayName": "Color by measure",
+                    "type": { "bool": true }
+                },
+                "sizeByMeasure": {
+                    "displayName": "Size by measure",
+                    "type": { "bool": true }
+                },
+                "minColor": {
+                    "displayName": "Min color",
+                    "type": { "fill": { "solid": { "color": true } } }
+                },
+                "maxColor": {
+                    "displayName": "Max color",
+                    "type": { "fill": { "solid": { "color": true } } }
+                }
+            }
+        },
+        "dataLabels": {
+            "displayName": "Data labels",
+            "properties": {
+                "show": {
+                    "displayName": "Show",
+                    "type": { "bool": true }
+                },
+                "fontFamily": {
+                    "displayName": "Font family",
+                    "type": { "formatting": { "fontFamily": true } }
+                },
+                "fontSize": {
+                    "displayName": "Text size",
+                    "type": { "formatting": { "fontSize": true } }
+                },
+                "color": {
+                    "displayName": "Font color",
+                    "type": { "fill": { "solid": { "color": true } } }
+                },
+                "staggerLabels": {
+                    "displayName": "Stagger labels",
+                    "type": { "bool": true }
+                },
+                "showPercentOfParent": {
+                    "displayName": "Show % of parent",
+                    "type": { "bool": true }
+                }
+            }
+        },
+        "state": {
+            "displayName": "State",
+            "properties": {
+                "selectedMeasure": {
+                    "displayName": "Selected measure",
+                    "type": { "text": true }
+                },
+                "savedViews": {
+                    "displayName": "Saved views",
+                    "type": { "text": true }
+                }
+            }
+        },
+        "subTotals": {
+            "displayName": "Subtotals",
+            "properties": {
+                "rowSubtotals": {
+                    "displayName": "Total",
+                    "description": "Show a grand total, aggregated by the host using the same aggregation as the measure field",
+                    "type": { "bool": true }
+                },
+                "perRowLevel": {
+                    "displayName": "Per level",
+                    "type": { "bool": true }
+                },
+                "levelSubtotalEnabled": {
+                    "type": { "bool": true }
+                },
+                "rowSubtotalsType": {
+                    "displayName": "Position",
+                    "type": {
+                        "enumeration": [
+                            { "displayName": "Top", "value": "Top" },
+                            { "displayName": "Bottom", "value": "Bottom" }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                { "levels": { "min": 1 }, "measure": { "max": 3 } }
+            ],
+            "matrix": {
+                "rows": {
+                    "for": { "in": "levels" },
+                    "dataReductionAlgorithm": { "top": { "count": 500 } }
+                },
+                "values": {
+                    "for": { "in": "measure" }
+                }
+            }
+        }
+    ],
+    "subtotals": {
+        "matrix": {
+            "rowSubtotals": {
+                "propertyIdentifier": {
+                    "objectName": "subTotals",
+                    "propertyName": "rowSubtotals"
+                },
+                "defaultValue": true
+            },
+            "rowSubtotalsPerLevel": {
+                "propertyIdentifier": {
+                    "objectName": "subTotals",
+                    "propertyName": "perRowLevel"
+                },
+                "defaultValue": false
+            },
+            "levelSubtotalEnabled": {
+                "propertyIdentifier": {
+                    "objectName": "subTotals",
+                    "propertyName": "levelSubtotalEnabled"
+                },
+                "defaultValue": true
+            },
+            "rowSubtotalsType": {
+                "propertyIdentifier": {
+                    "objectName": "subTotals",
+                    "propertyName": "rowSubtotalsType"
+                },
+                "defaultValue": "Bottom"
+            }
+        }
+    },
+    "privileges": []
+}
