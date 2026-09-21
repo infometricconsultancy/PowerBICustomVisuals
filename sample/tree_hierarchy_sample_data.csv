@@ -1,0 +1,29 @@
+Region,Country,City,Store,Revenue,Cost,Headcount
+North America,USA,New York,Downtown Flagship,845000,512000,42
+North America,USA,New York,Midtown,398000,251000,21
+North America,USA,Chicago,Loop,412000,268000,24
+North America,USA,Chicago,North Side,287000,190000,16
+North America,Canada,Toronto,Downtown,356000,229000,19
+North America,Canada,Toronto,Scarborough,198000,141000,11
+North America,Canada,Vancouver,Downtown,264000,171000,14
+North America,Canada,Vancouver,Richmond,152000,108000,9
+Europe,UK,London,Oxford Street,912000,548000,47
+Europe,UK,London,Canary Wharf,467000,298000,25
+Europe,UK,Manchester,City Centre,231000,159000,13
+Europe,Germany,Berlin,Mitte,378000,242000,20
+Europe,Germany,Berlin,Charlottenburg,209000,146000,12
+Europe,Germany,Munich,Altstadt,341000,219000,18
+Europe,France,Paris,Le Marais,406000,261000,22
+Europe,France,Paris,Champs-Elysees,589000,351000,29
+Europe,France,Lyon,Presqu'ile,176000,124000,10
+APAC,Japan,Tokyo,Shibuya,723000,438000,38
+APAC,Japan,Tokyo,Ginza,614000,372000,32
+APAC,Japan,Osaka,Namba,289000,192000,15
+APAC,Australia,Sydney,CBD,451000,286000,24
+APAC,Australia,Sydney,Bondi,167000,119000,9
+APAC,Australia,Melbourne,CBD,318000,206000,17
+APAC,India,Mumbai,Bandra,224000,153000,12
+APAC,India,Mumbai,Andheri,143000,101000,8
+APAC,India,Bengaluru,Indiranagar,196000,135000,11
+APAC,Singapore,Singapore,Orchard Road,502000,309000,26
+APAC,Singapore,Singapore,Marina Bay,388000,247000,20
