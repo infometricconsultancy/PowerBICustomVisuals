@@ -827,7 +827,19 @@ export class Visual implements IVisual {
         k: number
     ): { x: number; y: number } {
         const toolbarNode = this.toolbar.node();
-        const margin = (toolbarNode ? toolbarNode.getBoundingClientRect().height : 40) + 16;
+        // The toolbar itself sits 8px down from the container top (see
+        // .tree-toolbar's `top: 8px` in visual.less), so clearing it means
+        // clearing that offset *plus* its height, not just its height.
+        const toolbarOffset = 8;
+        const toolbarHeight = toolbarNode ? toolbarNode.getBoundingClientRect().height : 32;
+        // The root node itself can be as large as the "size by measure"
+        // radius scale allows (see radiusScale's range in renderTree, whose
+        // upper bound is 2x the configured default radius) - a flat spacing
+        // buffer wasn't enough headroom for that circle, which is what let
+        // it keep visually touching/hiding behind the toolbar even after
+        // the offset fix above.
+        const maxNodeRadius = Math.max(this.formattingSettings.nodesCard.defaultRadius.value * 2, 12);
+        const margin = toolbarHeight + toolbarOffset + maxNodeRadius + 16;
 
         if (!rootPoint) {
             return {
